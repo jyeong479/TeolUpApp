@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- 모서리를 둥글게 처리 -->
+    <corners android:radius="100dp" />
+    <!-- 색상은 selector_switch_track 사용 (반투명 없이 solid 적용) -->
+    <solid android:color="@color/selector_switch_track" />
+</shape>

@@ -1,0 +1,51 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TeolUpApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        
+        <!-- DatePicker 테마 전역 적용 -->
+        <item name="android:datePickerDialogTheme">@style/CustomDatePickerTheme</item>
+    </style>
+
+    <style name="Theme.TeolUpApp" parent="Base.Theme.TeolUpApp" />
+
+    <!-- BottomNavigationView용 커스텀 테마 -->
+    <style name="Theme.TeolUpApp.BottomNav" parent="ThemeOverlay.Material3.DynamicColors.DayNight">
+        <item name="colorSecondaryContainer">@android:color/transparent</item>
+    </style>
+
+    <!-- BottomNavigationView 기본 글자 스타일 (선택 안됨) -->
+    <style name="BottomNavTextStyle" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- BottomNavigationView 선택된 글자 스타일 (Bold 적용) -->
+    <style name="BottomNavTextStyle.Active" parent="BottomNavTextStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <!-- DatePicker 커스텀 테마 (Primary 색상 적용) -->
+    <style name="CustomDatePickerTheme" parent="ThemeOverlay.Material3.MaterialCalendar">
+        <!-- 헤더 및 선택 색상 -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <!-- 컨테이너 색상 -->
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/black</item>
+        
+        <!-- 버튼 색상 -->
+        <item name="buttonBarPositiveButtonStyle">@style/DatePickerButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/DatePickerButtonStyle</item>
+        
+        <!-- 구형 API 호환 -->
+        <item name="colorAccent">@color/primary</item>
+    </style>
+
+    <!-- DatePicker 버튼 스타일 -->
+    <style name="DatePickerButtonStyle" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/primary</item>
+    </style>
+</resources>
